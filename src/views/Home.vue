@@ -17,5 +17,6 @@ export default {
 <style lang="less" scoped>
 .container {
   display: flex;
+  justify-content: flex-end;
 }
 </style>
