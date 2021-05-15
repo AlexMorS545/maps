@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h2>Hello</h2>
+  <div class="container">
     <Cities/>
     <Map />
   </div>
@@ -15,3 +14,8 @@ export default {
   components: {Cities, Map}
 }
 </script>
+<style lang="less" scoped>
+.container {
+  display: flex;
+}
+</style>

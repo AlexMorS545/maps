@@ -1,38 +1,51 @@
 <template>
-  <yandex-map 
-    :coords="coords"
-    :zoom="10" 
-    :settings="settings"
-  >
-    <ymap-marker 
-      :coords="coords" 
-      marker-id="123" 
-      hint-content="some hint" 
-    />
-  </yandex-map>
+  <div class="map-wrap">
+    <div id="map"></div>
+  </div>
 </template>
 <script>
-import { yandexMap, ymapMarker } from 'vue-yandex-maps'
-
 export default {
   name: 'Map',
   data: () => ({
     coords: [
-      54.82896654088406,
-      39.831893822753904,
+      56.8519000,
+      60.6122000,
     ],
     settings: {
-      apiKey: '6025a482-aac7-49c7-92f3-80a120e27659',
-      lang: 'ru_RU',
-      coordoder: 'latlong',
-      version: '2.1'
+      zoom: 12
     }
   }),
-  components: {yandexMap, ymapMarker},
   methods: {
-    onClick(e) {
-      this.coords = e.get('coords');
+    getCoordData() {
+      return new Promise(r => setTimeout(() => {
+        this.coords
+        r()
+      }, 1000));
     },
+    initializeYandexMap() {
+      ymaps.ready(() => {
+        this.map = new ymaps.Map("map", {
+          center: this.coords,
+          ...this.settings
+        });
+      });
+    }
+  },
+  mounted() {
+    let scriptYandexMap = document.createElement('script');
+    scriptYandexMap.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU');
+    document.head.appendChild(scriptYandexMap);
+    scriptYandexMap.addEventListener("load", this.initializeYandexMap);
   }
 }
 </script>
+<style lang="less" scoped>
+.map-wrap {
+
+}
+#map {
+  width: 70vw;
+  height: 100vh;
+  background: blue;
+}
+</style>
