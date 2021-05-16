@@ -27,7 +27,7 @@ export default {
   }),
   methods: {
     initYandexMap() {
-      this.Map = new ymaps.Map("map", {...this.settings})
+      this.Map = new ymaps.Map("map",{...this.settings})
     }
   },
   async mounted() {
