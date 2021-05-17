@@ -1,0 +1,176 @@
+{
+  "region": [
+    {
+      "id": 1,
+      "title": "Russia",
+      "cities": [
+        {
+          "id": 1,
+          "name": "Екатеринбург",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Екатеринбург-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [56.839878, 60.613860]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Екатеринбург-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [56.822425, 60.612584]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Нижний Новгород",
+          "offices": [
+            {
+              "id": 1,
+              "name": "N-Nov-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [56.325996, 44.019041]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "N-Nov-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [56.328163, 44.002778]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Красноярск",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Красноярск-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [56.018254, 92.978863]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Красноярск-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [56.011795, 92.851819]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Архангельск",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Архангельск-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [64.549199, 40.522483]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Архангельск-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [64.549199, 40.522485]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Москва",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Москва-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [55.766543, 37.434504]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Москва-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [55.753190, 37.619485]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Belarus",
+      "cities": [
+        {
+          "id": 1,
+          "name": "Витебск",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Витебск-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [55.183772, 30.201462]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Витебск-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [55.166506, 30.233226]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Могилев",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Могилев-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [53.869306, 30.332006]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Могилев-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [53.860749, 30.305140]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Гродно",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Гродно-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [53.701618, 23.834070]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Гродно-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [53.687813, 23.823942]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Пинск",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Пинск-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [52.112601, 26.103463]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Пинск-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [52.112601, 26.103460]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Минск",
+          "offices": [
+            {
+              "id": 1,
+              "name": "Минск-1",
+              "place": {"geometry": {"type": "Point", "coordinates": [53.900940, 27.545823]}, "properties": {"balloonContentBody": "Hello"}}
+            },
+            {
+              "id": 2,
+              "name": "Минск-2",
+              "place": {"geometry": {"type": "Point", "coordinates": [53.889186, 27.576029]}, "properties": {"balloonContentBody": "Hello"}}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,7 @@
 </template>
 <script>
 import { loadYmap } from 'vue-yandex-maps'
+import {mapActions, mapGetters} from 'vuex'
 
 const settings = {
   apiKey: '6025a482-aac7-49c7-92f3-80a120e27659',
@@ -16,21 +17,45 @@ const settings = {
 export default {
   name: 'Map',
   data: () => ({
-    Map: null,
     settings: {
+      zoom: 4,
       center: [
         56.8519000,
         60.6122000,
-      ],
-      zoom: 5,
+      ]
     }
   }),
+  computed: mapGetters(['allCities', 'getLocations']),
   methods: {
+    ...mapActions(['getCities']),
     initYandexMap() {
-      this.Map = new ymaps.Map("map",{...this.settings})
+      let Map = new ymaps.Map("map", {...this.settings}, {searchControlProvider: 'yandex#search'})
+      let objectManager = new ymaps.ObjectManager({
+        clusterize: true,
+        gridSize: 32,
+        clusterDisableClickZoom: true
+      })
+    
+      objectManager.add(this.getLocations)
+      Map.geoObjects.add(objectManager)
+      // let myGeoObject = new ymaps.GeoObject({
+      //   geometry: {
+      //     type: "Point",
+      //     coordinates: [56.8519000, 60.6122000]
+      //   },
+      //   options: {
+      //   fill: true,
+      //   fillcolor: "#1e355d"
+      //   },
+      //   properties: {
+      //     balloonContent: '<p>Hello</p>'
+      //   }
+      // })
+      // Map.geoObjects.add(myGeoObject)
     }
   },
   async mounted() {
+    this.getCities()
     await loadYmap({ ...settings, debug: true });
     ymaps.ready(this.initYandexMap)
   }

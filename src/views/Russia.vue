@@ -9,12 +9,9 @@
 import Cities from '@/components/Cities'
 import Map from '@/components/YandexMap'
         
-import data from '../json/data.json'
-
 export default {
-  name: 'Home',
+  name: 'Russia',
   components: {Cities, Map},
-  computed: console.log(data)
 }
 </script>
 <style lang="less" scoped>
