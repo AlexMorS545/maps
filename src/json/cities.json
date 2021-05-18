@@ -2,7 +2,7 @@
   "region": [
     {
       "id": 1,
-      "title": "Russia",
+      "title": "Россия",
       "cities": [
         {
           "id": 1,
@@ -11,12 +11,12 @@
             {
               "id": 1,
               "name": "Екатеринбург-1",
-              "place": {"geometry": {"type": "Point", "coordinates": [56.839878, 60.613860]}, "properties": {"balloonContentBody": "Hello"}}
+              "place": {"geometry": {"type": "Point", "coordinates": [56.839878, 60.613860]}, "iconColor": "#1e355d", "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
               "name": "Екатеринбург-2",
-              "place": {"geometry": {"type": "Point", "coordinates": [56.822425, 60.612584]}, "properties": {"balloonContentBody": "Hello"}}
+              "place": {"geometry": {"type": "Point", "coordinates": [56.822425, 60.612584]}, "iconColor": "#1e355d", "properties": {"balloonContentBody": "Hello"}}
             }
           ]
         },
@@ -88,7 +88,7 @@
     },
     {
       "id": 2,
-      "title": "Belarus",
+      "title": "Белоруссия",
       "cities": [
         {
           "id": 1,

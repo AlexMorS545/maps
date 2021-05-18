@@ -10,8 +10,6 @@ export default {
 </script>
 <style lang="less" scoped>
 .cities-wrap {
-  max-width: 30vw;
-  height: 100%;
   background-color: cadetblue;
 }
 .citie {

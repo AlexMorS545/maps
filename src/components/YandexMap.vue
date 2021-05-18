@@ -25,9 +25,15 @@ export default {
       ]
     }
   }),
-  computed: mapGetters(['allCities', 'getLocations']),
+  computed: {
+    ...mapGetters(['allCities', 'updateLocation', 'getLocations']),
+    location() {
+      return this.$store.getters.updateLocation(+this.$route.params.id)
+    },
+  },
   methods: {
     ...mapActions(['getCities']),
+    
     initYandexMap() {
       let Map = new ymaps.Map("map", {...this.settings}, {searchControlProvider: 'yandex#search'})
       let objectManager = new ymaps.ObjectManager({
@@ -36,7 +42,7 @@ export default {
         clusterDisableClickZoom: true
       })
     
-      objectManager.add(this.getLocations)
+      objectManager.add(this.location)
       Map.geoObjects.add(objectManager)
       // let myGeoObject = new ymaps.GeoObject({
       //   geometry: {
