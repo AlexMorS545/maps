@@ -1,14 +1,11 @@
 <template>
   <nav class="links-wrp">
-    <router-link v-for="city of allCities.region" :key="city.id" :to="'/'+city.id " class="links">{{city.title}}</router-link>
+    <router-link v-for="city of allCities.region" :key="city.id" :to="'/'+ city.title " class="links">{{city.title}}</router-link>
   </nav>
 </template>
 <script>
 import {mapActions, mapGetters} from 'vuex'
 export default {
-  data: () => ({
-    key: 0
-  }),
   name: 'Navbar',
   computed: mapGetters(['allCities']),
   methods: mapActions(['getCities']),
@@ -33,7 +30,6 @@ export default {
   &:hover {
     background-color: #ff9e00;
     color: #ffffff;
-    border: 1px solid #ff9e00;
   }
   &.router-link-exact-active {
     background-color: #ff9e00;

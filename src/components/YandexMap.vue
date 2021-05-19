@@ -17,10 +17,10 @@ export default {
   computed: {
     ...mapGetters(['allCities']),
     location() {
-      return this.$store.getters.updateLocation(+this.$route.params.id)
+      return this.$store.getters.updateLocation(this.$route.params.title)
     },
     setSettings() {
-      return this.$store.getters.getSettings(+this.$route.params.id)
+      return this.$store.getters.getSettings(this.$route.params.title)
     }
   },
   methods: {
@@ -57,9 +57,7 @@ export default {
     await loadYmap({ ...settings, debug: true })
     ymaps.ready(this.initYandexMap)
   }
-    
 }
-// this.$store.getters.getSettings(+this.$route.params.id)
 </script>
 <style lang="less" scoped>
 .map-wrap {

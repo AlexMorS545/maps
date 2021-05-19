@@ -2,7 +2,6 @@
   <div class="wrap">
     <div class="city-wrp">
       <Navbar />
-      <Cities />
     </div>
     <div class="map">
       <Map :key="key"/>
@@ -16,9 +15,6 @@ import Map from '@/components/YandexMap'
 import Navbar from '@/components/Navbar'
 import {mapActions, mapGetters} from 'vuex'
 export default {
-  data: () => ({
-    key: 0
-  }),
   name: 'Home',
   components: {Cities, Map, Navbar},
   computed: mapGetters(['allCities']),

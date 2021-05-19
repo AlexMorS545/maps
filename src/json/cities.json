@@ -18,12 +18,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Екатеринбург-1",
+              "title": "Екатеринбург-1",
+              "name": "Иванов Иван Иванович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [56.839878, 60.613860]}, "iconColor": "#1e355d", "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Екатеринбург-2",
+              "title": "Екатеринбург-2",
+              "name": "Мишин Панкрат Юрьевич",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [56.822425, 60.612584]}, "iconColor": "#1e355d", "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -34,12 +42,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "N-Nov-1",
+              "title": "Нижний Новгород-1",
+              "name": "Петров Игорь Иванович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [56.325996, 44.019041]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "N-Nov-2",
+              "title": "Нижний Новгород-2",
+              "name": "Сидоров Игорь Иванович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [56.328163, 44.002778]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -50,12 +66,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Красноярск-1",
+              "title": "Красноярск-1",
+              "name": "Рябов Николай Мартынович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [56.018254, 92.978863]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Красноярск-2",
+              "title": "Красноярск-2",
+              "name": "Князев Овидий Федотович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [56.011795, 92.851819]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -66,12 +90,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Архангельск-1",
+              "title": "Архангельск-1",
+              "name": "Щукин Георгий Эльдарович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [64.549199, 40.522483]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Архангельск-2",
+              "title": "Архангельск-2",
+              "name": "Ширяев Владлен Вениаминович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [64.549199, 40.522485]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -82,12 +114,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Москва-1",
+              "title": "Москва-1",
+              "name": "Михеев Фрол Владленович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [55.766543, 37.434504]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Москва-2",
+              "title": "Москва-2",
+              "name": "Копылов Аверьян Константинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [55.753190, 37.619485]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -108,12 +148,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Витебск-1",
+              "title": "Витебск-1",
+              "name": "Игнатов Донат Антонинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [55.183772, 30.201462]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Витебск-2",
+              "title": "Витебск-2",
+              "name": "Кононов Гордий Васильевич",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [55.166506, 30.233226]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -124,12 +172,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Могилев-1",
+              "title": "Могилев-1",
+              "name": "Копылов Аверьян Константинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [53.869306, 30.332006]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Могилев-2",
+              "title": "Могилев-2",
+              "name": "Бобров Леонард Феликсович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [53.860749, 30.305140]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -140,12 +196,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Гродно-1",
+              "title": "Гродно-1",
+              "name": "Овчинников Константин Александрович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [53.701618, 23.834070]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Гродно-2",
+              "title": "Гродно-2",
+              "name": "Копылов Аверьян Константинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [53.687813, 23.823942]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -156,12 +220,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Пинск-1",
+              "title": "Пинск-1",
+              "name": "Копылов Аверьян Константинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [52.112601, 26.103463]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Пинск-2",
+              "title": "Пинск-2",
+              "name": "Копылов Аверьян Константинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [52.112601, 26.103460]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]
@@ -172,12 +244,20 @@
           "offices": [
             {
               "id": 1,
-              "name": "Минск-1",
+              "title": "Минск-1",
+              "name": "Копылов Аверьян Константинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [53.900940, 27.545823]}, "properties": {"balloonContentBody": "Hello"}}
             },
             {
               "id": 2,
-              "name": "Минск-2",
+              "title": "Минск-2",
+              "name": "Копылов Аверьян Константинович",
+              "phone1": "+7(866)396-93-99",
+              "phone2": "+7(866)396-93-99",
+              "email": "username@flagstudio.ru",
               "place": {"geometry": {"type": "Point", "coordinates": [53.889186, 27.576029]}, "properties": {"balloonContentBody": "Hello"}}
             }
           ]

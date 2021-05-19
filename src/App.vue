@@ -11,6 +11,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
 }
 </style>

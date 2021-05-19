@@ -6,6 +6,8 @@ const obj = {
   "features": []
 }
 
+
+
 export default createStore({
   state: {
     cities: []
@@ -23,9 +25,9 @@ export default createStore({
   },
   getters: {
     allCities: state => state.cities,
-    updateLocation: state => id => {
+    updateLocation: state => title => {
       state.cities.region.find(r => {
-        if(r.id === id) {
+        if(r.title === title) {
           obj.features = []
           r.cities.forEach(office => {
             office.offices.forEach(o => {
@@ -36,18 +38,29 @@ export default createStore({
       })
       return obj
     },
-    getSettings: state => id => {
+    getSettings: state => title => {
       let setCoords = {}
-      if(!id) {
+      if(!title) {
         setCoords = state.cities.settings
       } else {
         state.cities.region.find(r => {
-          if(r.id === id) {
+          if(r.title === title) {
             setCoords = r.settings
           }
         })
       }
       return setCoords
+    },
+    getOffices: state => title => {
+      let mapOffice = []
+      state.cities.region.find(r => {
+        if(r.title === title) {
+          r.cities.forEach(office => {
+            mapOffice.push(office)
+          })
+        }
+      })
+      return mapOffice
     }
   },
   modules: {
