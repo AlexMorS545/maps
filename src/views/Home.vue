@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <div class="city-wrp">
-      <Navbar @click.prevent="forceRender" />
+      <Navbar />
       <Cities />
     </div>
     <div class="map">
@@ -19,15 +19,10 @@ export default {
   data: () => ({
     key: 0
   }),
-  name: 'Maps',
+  name: 'Home',
   components: {Cities, Map, Navbar},
   computed: mapGetters(['allCities']),
-  methods: {
-    ...mapActions(['getCities']),
-    forceRender() {
-      this.key +=1
-    }
-  },
+  methods: mapActions(['getCities']),
   mounted() {
     this.getCities
   }

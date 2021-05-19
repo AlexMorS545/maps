@@ -1,45 +1,23 @@
 <template>
-  <div class="wrap">
-    <div class="city-wrp">
-      <Navbar @click.prevent="forceRender" />
-      <Cities />
-    </div>
-    <div class="map">
-      <Map :key="key"/>
-    </div>
-  </div>
+  <nav class="links-wrp">
+    <router-link v-for="city of allCities.region" :key="city.id" :to="'/'+city.id " class="links">{{city.title}}</router-link>
+  </nav>
 </template>
-
 <script>
-import Cities from '@/components/Cities'
-import Map from '@/components/YandexMap'
-import Navbar from '@/components/Navbar'
 import {mapActions, mapGetters} from 'vuex'
 export default {
   data: () => ({
     key: 0
   }),
-  name: 'Maps',
-  components: {Cities, Map, Navbar},
+  name: 'Navbar',
   computed: mapGetters(['allCities']),
-  methods: {
-    ...mapActions(['getCities']),
-    forceRender() {
-      this.key +=1
-    }
-  },
+  methods: mapActions(['getCities']),
   mounted() {
     this.getCities
   }
 }
 </script>
 <style lang="less" scoped>
-.wrap {
-  display: flex;
-}
-.city-wrp {
-  background-color: #FAFAFA;
-}
 .links-wrp {
   display: flex;
 }

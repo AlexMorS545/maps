@@ -10,6 +10,7 @@ export default {
 <style lang="less">
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>

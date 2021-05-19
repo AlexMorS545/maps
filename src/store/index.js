@@ -19,21 +19,10 @@ export default createStore({
   mutations: {
     updateCities: (state, cities) => {
       state.cities = cities
-      console.log('cities: ', state.cities)
     }
   },
   getters: {
     allCities: state => state.cities,
-    getLocations: state => {
-      state.cities.region.forEach(r => {
-        r.cities.forEach(office => {
-          office.offices.forEach(o => {
-            obj.features.push(o.place)
-          })
-        })
-      })
-      return obj
-    },
     updateLocation: state => id => {
       state.cities.region.find(r => {
         if(r.id === id) {
@@ -43,11 +32,22 @@ export default createStore({
               obj.features.push(o.place)
             })
           })
-          console.log(r)
         }
       })
-      console.log(obj)
       return obj
+    },
+    getSettings: state => id => {
+      let setCoords = {}
+      if(!id) {
+        setCoords = state.cities.settings
+      } else {
+        state.cities.region.find(r => {
+          if(r.id === id) {
+            setCoords = r.settings
+          }
+        })
+      }
+      return setCoords
     }
   },
   modules: {

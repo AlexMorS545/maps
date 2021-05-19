@@ -1,7 +1,5 @@
 <template>
-  <div class="map-wrap">
-    <div id="map"></div>
-  </div>
+  <div id="map"></div>
 </template>
 <script>
 import { loadYmap } from 'vue-yandex-maps'
@@ -16,26 +14,20 @@ const settings = {
 
 export default {
   name: 'Map',
-  data: () => ({
-    settings: {
-      zoom: 4,
-      center: [
-        56.8519000,
-        60.6122000,
-      ]
-    }
-  }),
   computed: {
-    ...mapGetters(['allCities', 'updateLocation', 'getLocations']),
+    ...mapGetters(['allCities']),
     location() {
       return this.$store.getters.updateLocation(+this.$route.params.id)
     },
+    setSettings() {
+      return this.$store.getters.getSettings(+this.$route.params.id)
+    }
   },
   methods: {
     ...mapActions(['getCities']),
-    
     initYandexMap() {
-      let Map = new ymaps.Map("map", {...this.settings}, {searchControlProvider: 'yandex#search'})
+      let Map = new ymaps.Map("map", {...this.setSettings}, {searchControlProvider: 'yandex#search'})
+      
       let objectManager = new ymaps.ObjectManager({
         clusterize: true,
         gridSize: 32,
@@ -62,16 +54,20 @@ export default {
   },
   async mounted() {
     this.getCities()
-    await loadYmap({ ...settings, debug: true });
+    await loadYmap({ ...settings, debug: true })
     ymaps.ready(this.initYandexMap)
   }
     
 }
+// this.$store.getters.getSettings(+this.$route.params.id)
 </script>
 <style lang="less" scoped>
-
+.map-wrap {
+  width: 100%;
+}
 #map {
-  width: 70vw;
-  height: 100vh;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 </style>
