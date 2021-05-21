@@ -6,8 +6,6 @@ const obj = {
   "features": []
 }
 
-
-
 export default createStore({
   state: {
     cities: []
@@ -53,13 +51,15 @@ export default createStore({
     },
     getOffices: state => title => {
       let mapOffice = []
-      state.cities.region.find(r => {
-        if(r.title === title) {
-          r.cities.forEach(office => {
-            mapOffice.push(office)
-          })
-        }
-      })
+      if(state.cities.region) {
+        state.cities.region.find(r => {
+          if(r.title === title) {
+            r.cities.forEach(office => {
+              mapOffice.push(office)
+            })
+          }
+        })
+      }
       return mapOffice
     }
   },
