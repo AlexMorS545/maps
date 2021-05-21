@@ -1,10 +1,10 @@
 import { createStore } from 'vuex'
 import data from '../json/cities.json'
 
-const obj = {
-  "type": "FeatureCollection",
-  "features": []
-}
+// const obj = {
+//   "type": "FeatureCollection",
+//   "features": []
+// }
 
 export default createStore({
   state: {
@@ -23,19 +23,19 @@ export default createStore({
   },
   getters: {
     allCities: state => state.cities,
-    updateLocation: state => title => {
-      state.cities.region.find(r => {
-        if(r.title === title) {
-          obj.features = []
-          r.cities.forEach(office => {
-            office.offices.forEach(o => {
-              obj.features.push(o.place)
-            })
-          })
-        }
-      })
-      return obj
-    },
+    // getLocation: state => title => {
+    //   state.cities.region.find(r => {
+    //     if(r.title === title) {
+    //       obj.features = []
+    //       r.cities.forEach(office => {
+    //         office.offices.forEach(o => {
+    //           obj.features.push(o.place)
+    //         })
+    //       })
+    //     }
+    //   })
+    //   return obj
+    // },
     getSettings: state => title => {
       let setCoords = {}
       if(!title) {
@@ -54,8 +54,8 @@ export default createStore({
       if(state.cities.region) {
         state.cities.region.find(r => {
           if(r.title === title) {
-            r.cities.forEach(office => {
-              mapOffice.push(office)
+            r.cities.forEach(city => {
+              mapOffice.push(city)
             })
           }
         })

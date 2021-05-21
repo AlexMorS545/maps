@@ -1,7 +1,7 @@
 <template>
   <div class="cities-wrap">
     <ul class="city">
-      <li class="city__links" v-for="office of getOffices" :key="office.id" @click="showOffice(office.id, $event)">
+      <li class="city__links" v-for="office of getCities" :key="office.id" @click="showOffice(office.id, $event)">
         <span class="city__title" :data-id="`${office.id}`">{{ office.name }}</span>
         <ul class="office">
           <li class="office__links" v-for="o of office.offices" :key="o.id">
@@ -22,14 +22,14 @@
 export default {
   name: 'Cities',
   computed: {
-    getOffices() {
+    getCities() {
       return this.$store.getters.getOffices(this.$route.params.title)
     }
   },
   methods: {
     showOffice(id, e) {
       let cities = document.querySelectorAll('.city__title')
-      cities.forEach(c => c.classList.toggle('active')) 
+      cities.forEach(c => c.classList.toggle('active'))
       let office = document.querySelectorAll('.office')
       office.forEach(o => o.classList.toggle('active'))
     }
