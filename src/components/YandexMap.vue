@@ -35,7 +35,7 @@ export default {
       let Map = new ymaps.Map("map", {...this.setSettings}, {searchControlProvider: 'yandex#search'})
 
       let countryCities = new ymaps.GeoObjectCollection(null, {
-        preset: 'islands#redGovernmentCircleIcon',
+        preset: 'islands#circleIcon',
         iconColor: '#1e355d',
         hideIconOnBalloonOpen: false
       })
@@ -45,7 +45,6 @@ export default {
       for (var i = 0, l = countryCoords.length; i < l; i++) {
         countryCities.add(new ymaps.Placemark(countryCoords[i],
         {
-          
           balloonContent: `<p>Hello</p>`
         }))
       } 
