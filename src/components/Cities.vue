@@ -1,10 +1,10 @@
 <template>
   <div class="cities-wrap">
     <ul class="city">
-      <li class="city__links" v-for="office of getCities" :key="office.id" @click="showOffice(office.id, $event)">
-        <span class="city__title" :data-id="`${office.id}`">{{ office.name }}</span>
-        <ul class="office">
-          <li class="office__links" v-for="o of office.offices" :key="o.id">
+      <li class="city__links" v-for="city of getCities" :key="city.id" @click="show=!show">
+        <span class="city__title">{{ city.name }}</span>
+        <ul class="office" v-show="show">
+          <li class="office__links" v-for="o of city.offices" :key="o.id">
             <span class="office__office">Офис&nbsp;<span class="office__title">{{o.title}}</span></span>
             <span class="office__name">{{o.name }}</span>
             <div class="phone">
@@ -21,17 +21,24 @@
 <script>
 export default {
   name: 'Cities',
+  data: () => ({
+    office: [],
+    show: false
+  }),
   computed: {
     getCities() {
       return this.$store.getters.getOffices(this.$route.params.title)
     }
   },
   methods: {
-    showOffice(id, e) {
-      let cities = document.querySelectorAll('.city__title')
-      cities.forEach(c => c.classList.toggle('active'))
-      let office = document.querySelectorAll('.office')
-      office.forEach(o => o.classList.toggle('active'))
+    showOffice(office) {
+      this.office = []
+      if(office) {
+        office.forEach(o => {
+          this.office.push(o)
+        })
+      }
+      return this.office
     }
   }
 }
@@ -87,10 +94,10 @@ export default {
 }
 .office {
   padding: 0;
-  display: none;
-  &.active {
-    display: block;
-  }
+  display: block;
+  // &.active {
+  //   display: block;
+  // }
   &__links {
     display: flex;
     flex-wrap: wrap;

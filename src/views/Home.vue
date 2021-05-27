@@ -4,7 +4,7 @@
       <Navbar />
     </div>
     <div class="map">
-      <Map :key="key"/>
+      <Map :key="key" />
     </div>
   </div>
 </template>
@@ -30,29 +30,6 @@ export default {
 }
 .city-wrp {
   background-color: #FAFAFA;
-}
-.links-wrp {
-  display: flex;
-}
-.links {
-  display: block;
-  text-decoration: none;
-  padding: 15px 70px;
-  color: #929292;
-  font-size: 11px;
-  background-color: #ffffff;
-  border: 1px solid #929292;
-  transition: all .2s ease;
-  &:hover {
-    background-color: #ff9e00;
-    color: #ffffff;
-    border: 1px solid #ff9e00;
-  }
-  &.router-link-exact-active {
-    background-color: #ff9e00;
-    border: 1px solid #ff9e00;
-    color: #ffffff;
-  }
 }
 .map {
   width: 100%;

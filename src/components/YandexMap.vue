@@ -28,16 +28,17 @@ export default {
   },
   methods: {
     ...mapActions(['getCities']),
-    renderCities(office) {
-      return `<div class="office">
-								<span class="office__office">Офис&nbsp;<span class="office__title">${office.title}</span></span>
-								<span class="office__name">${office.name}</span>
-								<div class="phone">
-									<a class="phone__links" href="tel:${office.phone1}">${office.phone1}</a>
-									<a class="phone__links" href="tel:${office.phone2}">${office.phone2}</a>
-								</div>
-								<a class="office__email" href="mailto:${office.email}">${office.email}</a>
-							</div>`
+    renderOffice(office) {
+    	const item = `<div class="office">
+											<span class="office__office">Офис&nbsp;<span class="office__title">${office.title}</span></span>
+											<span class="office__name">${office.name}</span>
+											<div class="phone">
+												<a class="phone__links" href="tel:${office.phone1}">${office.phone1}</a>
+												<a class="phone__links" href="tel:${office.phone2}">${office.phone2}</a>
+											</div>
+											<a class="office__email" href="mailto:${office.email}">${office.email}</a>
+										</div>`
+			return item
     },
     initYandexMap() {
       let Map = new ymaps.Map("map", {...this.setSettings}, {searchControlProvider: 'yandex#search'})
@@ -47,17 +48,17 @@ export default {
       this.Cities.forEach(city => {
         city.offices.forEach(office => {
 					Placemarks.push(new ymaps.Placemark(office.coordinates, {
-						balloonContentBody: this.renderCities(office),
+						balloonContentBody: this.renderOffice(office),
 					}))
         })
       })
 
 			let customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-				'<div class="ballon">'+
-					'{% for geoObject in properties.geoObjects %}'+
-						'<div class=ballon_body>{{ geoObject.properties.balloonContentBody|raw }}</div>'+
-					'{% endfor %}'+
-				'</div>'
+				`<div class="ballon">
+					{% for geoObject in properties.geoObjects %}
+						<div class=ballon_body>{{ geoObject.properties.balloonContentBody|raw }}</div>
+					{% endfor %}
+				</div>`
     	);
 
       let Clusterer = new ymaps.Clusterer({
@@ -136,7 +137,7 @@ export default {
 	margin-bottom: 20px;
 	display: flex;
 	flex-direction: row;
-	justify-content: start;
+	justify-content: flex-start;
 	&__links {
 		display: block;
 		text-decoration: none;

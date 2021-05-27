@@ -1,11 +1,11 @@
 <template>
   <div class="wrap">
     <div class="city-wrp">
-      <Navbar @click.prevent="forceRender" />
+      <Navbar @click="forceRender" />
       <Cities />
     </div>
     <div class="map">
-      <Map :key="key"/>
+      <Map :key="key" />
     </div>
   </div>
 </template>
@@ -15,13 +15,16 @@ import Cities from '@/components/Cities'
 import Map from '@/components/YandexMap'
 import Navbar from '@/components/Navbar'
 import {mapActions, mapGetters} from 'vuex'
+
 export default {
   data: () => ({
     key: 0
   }),
   name: 'Maps',
   components: {Cities, Map, Navbar},
-  computed: mapGetters(['allCities']),
+  computed: {
+    ...mapGetters(['allCities'])
+  },
   methods: {
     ...mapActions(['getCities']),
     forceRender() {
