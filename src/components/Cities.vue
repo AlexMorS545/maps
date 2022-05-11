@@ -1,9 +1,9 @@
 <template>
   <div class="cities-wrap">
     <ul class="city">
-      <li class="city__links" v-for="city of getCities" :key="city.id" @click="show=!show">
+      <li class="city__links" v-for="city of getCities" :key="city.id" @click="showOffice">
         <span class="city__title">{{ city.name }}</span>
-        <ul class="office" v-show="show">
+        <ul class="office">
           <li class="office__links" v-for="o of city.offices" :key="o.id">
             <span class="office__office">Офис&nbsp;<span class="office__title">{{o.title}}</span></span>
             <span class="office__name">{{o.name }}</span>
@@ -23,7 +23,7 @@ export default {
   name: 'Cities',
   data: () => ({
     office: [],
-    show: false
+    // show: false
   }),
   computed: {
     getCities() {
@@ -31,14 +31,8 @@ export default {
     }
   },
   methods: {
-    showOffice(office) {
-      this.office = []
-      if(office) {
-        office.forEach(o => {
-          this.office.push(o)
-        })
-      }
-      return this.office
+    showOffice(e) {
+        e.currentTarget.querySelector('.office').classList.toggle('active')
     }
   }
 }
@@ -94,15 +88,14 @@ export default {
 }
 .office {
   padding: 0;
-  display: block;
-  // &.active {
-  //   display: block;
-  // }
+  display: none;
+   &.active {
+     display: block;
+   }
   &__links {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 20px;
     font-weight: bold;
     list-style: none;
     margin-bottom: 40px;
